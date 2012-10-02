@@ -1,0 +1,14 @@
+[
+    {
+        "caption": "Run Text Command",
+        "command": "run_text_command"
+    },
+    {
+        "caption": "Run Window Command",
+        "command": "run_window_command"
+    },
+    {
+        "caption": "Run Application Command",
+        "command": "run_application_command"
+    }
+]

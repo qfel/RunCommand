@@ -1,0 +1,14 @@
+{
+    "show_arguments": true,
+	"application_commands": [
+	],
+	"window_commands": [
+        {
+            "name": "set_layout",
+            "doc": "Sets the layout of tabs in a window",
+            "args": ["cells", "rows", "cols"]
+        }
+	],
+	"text_commands": [
+	]
+}
