@@ -21,8 +21,8 @@ as in Python.
 
 Settings
 ========
-There are 3 bool settings you can configure in Preferences.sublime-settings:
+There are 3 bool settings you can configure in RunCommand.sublime-settings:
 
-- runcmd\_show\_arguments
-- runcmd\_show\_boring\_defaults
-- runcmd\_show\_docstring
+- show\_arguments
+- show\_boring\_defaults
+- show\_doc
