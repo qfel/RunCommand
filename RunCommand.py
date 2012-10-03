@@ -146,7 +146,7 @@ class RunCommand(object):
             self.get_window().show_input_panel(format_arguments(cmd) + ':', '',
                     partial(self.handle_complex_command, cmd), None, None)
         else:
-            self.run_command(cmd)
+            self.run_command(cmd.name)
 
     def handle_complex_command(self, cmd, args):
         try:
