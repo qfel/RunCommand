@@ -66,7 +66,7 @@ def format_arguments(cmd):
     optional_args = []
     for name, value in cmd.optional_args:
         if show_boring or value:
-            optional_args.append(u'{0}={1}'.format(name, value))
+            optional_args.append(u'{0}={1}'.format(name, json.dumps(value)))
         else:
             optional_args.append(name)
     if cmd.has_arbitrary_args:
