@@ -89,10 +89,11 @@ class RunCommand(object):
             else:
                 raise ValueError('Cannot specify required arguments after '
                                  'optional ones')
-        return CommandInfo(
-                name=cmd['name'], doc=cmd.get('doc'),
-                required_args=required_args, optional_args=optional_args,
-                has_arbitrary_args=cmd.get('has_arbitrary_args', False))
+        return CommandInfo(name=cmd['name'], doc=cmd.get('doc'),
+                           required_args=required_args,
+                           optional_args=optional_args,
+                           has_arbitrary_args=cmd.get('has_arbitrary_args',
+                                                      False))
 
     def get_plugin_command_info(self, cmd_cls):
         # Optionally strip the "Command" suffix.
@@ -106,8 +107,8 @@ class RunCommand(object):
 
         # Create argument lists.
         spec = getargspec(cmd_cls.run)
-        skip_args = isinstance(cmd_cls.run, (MethodType, BuiltinMethodType)) + \
-                self.SKIP_ARGS
+        skip_args = self.SKIP_ARGS + \
+            isinstance(cmd_cls.run, (MethodType, BuiltinMethodType))
 
         # Strip first skip_args.
         args = spec.args[skip_args:]
