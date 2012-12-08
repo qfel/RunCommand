@@ -1,5 +1,6 @@
 {
     "show_arguments": true,
+    "show_boring_defaults": true,
 	"application_commands": [
 	],
 	"window_commands": [
